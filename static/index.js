@@ -365,8 +365,8 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             let id = 'GameLayer' + i;
             html += '<div id="' + id + '" class="GameLayer">';
             for (let j = 0; j < 10; j++) {
-                for (let k = 0; k < 4; k++) {
-                    html += '<div id="' + id + '-' + (k + j * 4) + '" num="' + (k + j * 4) + '" class="block' + (k ? ' bl' : '') +
+                for (let k = 0; k < 5; k++) {
+                    html += '<div id="' + id + '-' + (k + j * 5) + '" num="' + (k + j * 4) + '" class="block' + (k ? ' bl' : '') +
                         '"></div>';
                 }
             }
