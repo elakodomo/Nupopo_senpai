@@ -267,11 +267,11 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
         _clearttClsReg = / t{1,2}\d+| bad/;
 
     function refreshGameLayer(box, loop, offset) {
-        let i = Math.floor(Math.random() * 1000) % 4 + (loop ? 0 : 4);
+        let i = Math.floor(Math.random() * 1000) % 5 + (loop ? 0 : 5);
         for (let j = 0; j < box.children.length; j++) {
             let r = box.children[j], rstyle = r.style;
-            rstyle.left = (j % 4) * blockSize + 'px';
-            rstyle.bottom = Math.floor(j / 4) * blockSize + 'px';
+            rstyle.left = (j % 5) * blockSize + 'px';
+            rstyle.bottom = Math.floor(j / 5) * blockSize + 'px';
             rstyle.width = blockSize + 'px';
             rstyle.height = blockSize + 'px';
             r.className = r.className.replace(_clearttClsReg, '');
@@ -282,7 +282,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
                 });
                 r.className += ' t' + (Math.floor(Math.random() * 1000) % 5 + 1);
                 r.notEmpty = true;
-                i = (Math.floor(j / 4) + 1) * 4 + Math.floor(Math.random() * 1000) % 4;
+                i = (Math.floor(j / 5) + 1) * 5 + Math.floor(Math.random() * 1000) % 5;
             } else {
                 r.notEmpty = false;
             }
