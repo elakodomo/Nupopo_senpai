@@ -131,8 +131,8 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             for (let j = 0; j < box.children.length; j++) {
                 let r = box.children[j],
                     rstyle = r.style;
-                rstyle.left = (j % 4) * blockSize + 'px';
-                rstyle.bottom = Math.floor(j / 4) * blockSize + 'px';
+                rstyle.left = (j % 5) * blockSize + 'px';
+                rstyle.bottom = Math.floor(j / 5) * blockSize + 'px';
                 rstyle.width = blockSize + 'px';
                 rstyle.height = blockSize + 'px';
             }
@@ -366,7 +366,7 @@ const MODE_NORMAL = 1, MODE_ENDLESS = 2, MODE_PRACTICE = 3;
             html += '<div id="' + id + '" class="GameLayer">';
             for (let j = 0; j < 10; j++) {
                 for (let k = 0; k < 5; k++) {
-                    html += '<div id="' + id + '-' + (k + j * 5) + '" num="' + (k + j * 4) + '" class="block' + (k ? ' bl' : '') +
+                    html += '<div id="' + id + '-' + (k + j * 4) + '" num="' + (k + j * 4) + '" class="block' + (k ? ' bl' : '') +
                         '"></div>';
                 }
             }
